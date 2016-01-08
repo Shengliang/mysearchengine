@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Search Page</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/angular/bower-material/master/angular-material.css"> {% block head %}
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"> {% endblock %}
+</head>
+
+<body>
+    <div id=googleImg style="margin-top:10%; text-align:center"><img src="{{ url_for('static', filename='MySearch.png') }}" height="100px"></div>
+    <div ng-controller="SearchController" ng-app="MyApp">
+        <div class="searchbox">
+            <section layout="row">
+                <md-input-container flex="">
+                    <label>Search</label>
+                    <input style="width: 100%" ng-model="user.searchTerm" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()">
+                </md-input-container>
+                <md-button id="button" class="md-fab md-primary md-hue-1" ng-click="someFunction()">
+                    <md-icon md-svg-src="{{ url_for('static', filename='search.svg') }}"></md-icon>
+                </md-button>
+            </section>
+        </div>    
+         <md-whiteframe class="md-whiteframe-z2 resultbox" layout layout-align="center center">
+              <h3> <span ng:bind=message> </span> </h3>
+          </md-whiteframe>
+    </div>
+    
+    
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js'></script>
+<script src='https://cdn.rawgit.com/angular/bower-material/master/angular-material.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js'></script>
+<script src="{{ url_for('static', filename='search.js') }}"></script>
+
+</html>

@@ -1,0 +1,30 @@
+ .searchbox {
+      width: 90%;
+      padding: 10px;
+      height: 60px;
+      margin: auto;
+      vertical-align: center;
+      background-color: #fff;
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+    }
+    
+    
+     .resultbox {
+      width: 92%;
+      
+      height: 120px;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      vertical-align: center;
+      background-color: #fff;
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+    }
+    
+     #googleImg {
+      width: 357px;
+      margin-left: auto;
+      margin-right: auto;
+      height: suto;
+      
+    }
